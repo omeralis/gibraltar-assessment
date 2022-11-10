@@ -10,6 +10,8 @@ a {
 
 .header {
   margin: 0 100px;
+  position: sticky;
+  top: 0;
 }
 
 .site-identity h1 {
@@ -55,61 +57,8 @@ a {
     transition: all 1s;
   }
 
-  &:hover {
-    background: $primary;
-    color: $white;
-  }
-
   img {
     padding: 5px;
-  }
-}
-
-header .background {
-  position: absolute;
-  z-index: 1;
-  background: $white;
-  color: $primary;
-  box-shadow: 0 0 10px 0px rgb(213 213 213), 0px 1px 20px 0px rgb(255 237 237 / 0%);
-  text-align: center;
-  border-radius: 50%;
-  padding: 20px;
-  top: -110px;
-  left: 0;
-  right: 0;
-  width: 250px;
-  height: 200px;
-  margin: auto;
-
-  h1 {
-    position: relative;
-    bottom: -60px;
-    color: $primary;
-    font-weight: 100;
-    font-size: 2rem;
-  }
-
-  p {
-    position: relative;
-    bottom: -70px;
-    color: $secondary;
-    font-size: 0.8rem;
-  }
-}
-  .drop{
-    position: absolute;
-    top: 10%;
-    &:hover{
-      display: block;
-    }
-  }
-@media (max-width: 768px) {
-  .site-navigation li {
-    margin: unset;
-  }
-
-  header .background {
-    margin: auto;
   }
 }
 
@@ -118,10 +67,11 @@ li:hover .mega-menu {
   z-index: 100;
   top: calc(100% + 1px);
 }
+
 .mega-menu {
   position: absolute;
   width: 100%;
-  left: -40%;
+  left: -70%;
   border-bottom: 3px solid var(--main-color);
   z-index: -1;
   display: flex;
@@ -129,16 +79,19 @@ li:hover .mega-menu {
   top: calc(100% + 50px);
   opacity: 0;
   transition: top var(--main-transition), opacity var(--main-transition);
-  .links{
-        background: $white;
-        box-shadow: 0 0 10px 0px rgb(213 213 213), 0px 1px 20px 0px rgb(255 237 237 / 0%);
-        margin: 0;
-        border-radius: 10px;
-    li{
-      &:hover{
-        background-color: $primary;
-        color: #000;
+
+  .links {
+    background: $white;
+    box-shadow: 0 0 10px 0px rgb(213 213 213), 0px 1px 20px 0px rgb(255 237 237 / 0%);
+    margin: 0;
+    border-radius: 10px;
+
+    li {
+      &:hover {
+        background-color: none;
+        color: none;
       }
+
       &:before {
         content: "";
         border-radius: 0;
@@ -152,9 +105,66 @@ li:hover .mega-menu {
         transition: all 1s;
         padding: 0;
       }
-      a{
+
+      a {
         font-size: 0.8rem;
       }
     }
+  }
+}
+
+header {
+  .hide {
+    display: none !important;
+  }
+  .background {
+    position: absolute;
+    z-index: 1;
+    background: $white;
+    color: $primary;
+    box-shadow: 0 0 10px 0px rgb(213 213 213), 0px 1px 20px 0px rgb(255 237 237 / 0%);
+    text-align: center;
+    border-radius: 50%;
+    padding: 20px;
+    top: -110px;
+    left: 0;
+    right: 0;
+    width: 250px;
+    height: 200px;
+    margin: auto;
+
+    h1 {
+      position: relative;
+      bottom: -60px;
+      color: $primary;
+      font-weight: 100;
+      font-size: 2rem;
+    }
+
+    p {
+      position: relative;
+      bottom: -70px;
+      color: $secondary;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.drop {
+  position: absolute;
+  top: 10%;
+
+  &:hover {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-navigation li {
+    margin: unset;
+  }
+
+  header .background {
+    margin: auto;
   }
 }

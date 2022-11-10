@@ -8,6 +8,9 @@
                 <div class="mega-menu">
                     <ul class="links">
                         <li>
+                            <a (click)="scroll('home')"> Home</a>
+                        </li>
+                        <li>
                             <a (click)="scroll('offer')"> Offer</a>
                         </li>
                         <li>
@@ -25,7 +28,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="background">
+            <li class="background" [ngClass]="visibilityBackground ? '' : 'hide' ">
                 <a href="#">
                     <h1>CRIOS</h1>
                     <P>FREE PSD TEMPLATE</P>
