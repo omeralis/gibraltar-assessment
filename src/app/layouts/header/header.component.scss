@@ -160,6 +160,10 @@ header {
 }
 
 @media (max-width: 768px) {
+  .header {
+    position: unset;
+    top: unset;
+  }
   .site-navigation li {
     margin: unset;
   }
