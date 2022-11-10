@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
  
   public scroll(elementId: any): void {
     this.viewportScroller.scrollToAnchor(elementId)
-    window.scroll({ behavior: "smooth" , top:1000 })
   }
   
 

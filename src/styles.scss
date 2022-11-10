@@ -7,7 +7,9 @@ $secondary: #dddddd;
     font-family: font-Montserrat-regular;
     src: url(./assets/fonts/Montserrat-Regular.otf);
 }
-
+html{
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
