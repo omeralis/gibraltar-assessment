@@ -1,0 +1,41 @@
+section{
+    height: 50vh;
+    margin:100px;
+}
+.content{
+    text-align: center;
+}
+.box-offer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 40px 0;
+}
+.box{
+    cursor: pointer;
+    transition: all 1s;
+    &:hover{
+        transform: translateY(-30px);
+    }
+}
+.box-body{
+    p{
+        font-size: 12px;
+        color: #ddd;
+        width: 70%;
+        margin: auto;
+    }
+} 
+
+@media (max-width: 768px) {
+    section{
+        height: auto;
+        margin: unset;
+    }
+    .box{
+        padding-bottom: 3rem;
+    }
+    .box-offer{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
